@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "portfolio",
+    "style": "scss",
+    "postcss": true
+  }
+}
