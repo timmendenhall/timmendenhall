@@ -9,8 +9,9 @@ class AppComponent extends React.Component {
     render() {
         return (
             <div className="index">
+                <img src={yeomanImage} />
                 <div className="notice">Tim Mendenhall Portfolio</div>
-                <strong>Coming Soon</strong>
+                <strong>Coming Sooner</strong>
             </div>
         );
     }
