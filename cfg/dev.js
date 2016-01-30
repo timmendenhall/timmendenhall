@@ -26,10 +26,7 @@ config.module.loaders.push({
     include: [].concat(
         config.additionalPaths,
         [path.join(__dirname, '/../src')]
-    ),
-    query: {
-        presets: ['react', 'es2015', 'react-hmre']
-    }
+    )
 });
 
 module.exports = config;
