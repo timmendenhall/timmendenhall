@@ -1,9 +1,5 @@
 /*eslint no-console:0 */
 require('core-js/fn/object/assign');
-var webpack = require('webpack');
-var webpackDevMiddleware = require('webpack-dev-middleware');
-var webpackHotMiddleware = require('webpack-hot-middleware');
-var config = require('./webpack.config');
 var open = require('open');
 var express = require('express');
 var path = require('path');
@@ -17,6 +13,10 @@ var isProduction = process.env.NODE_ENV === 'production';
 
 // -- Add the Dev / Hot middleware if we're not in production mode
 if (!isProduction) {
+    var webpack = require('webpack');
+    var webpackDevMiddleware = require('webpack-dev-middleware');
+    var webpackHotMiddleware = require('webpack-hot-middleware');
+    var config = require('./webpack.config');
     var compiler = webpack(config);
 
     app.use(webpackDevMiddleware(compiler, {
@@ -45,6 +45,7 @@ app.get('*', function (req, res) {
 });
 
 app.listen(port, function () {
-    console.log('timmendenhall.com Server listening on port ', port);
-    open('http://localhost:' + port);
+    var env = isProduction ? 'PROD' : 'DEV';
+    console.log('timmendenhall.com [ ' + env  + ' ] Server listening on port: ', port);
+    //open('http://localhost:' + port);
 });

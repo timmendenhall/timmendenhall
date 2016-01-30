@@ -22,12 +22,28 @@ let config = _.merge({
 
 // Add needed loaders
 config.module.loaders.push({
-    test: /\.js$/,
-    exclude: /node_modules/,
+    test: /\.(js|jsx)$/,
     loader: 'babel-loader',
+    include: [].concat(
+        config.additionalPaths,
+        [path.join(__dirname, '/../src')]
+    ),
     query: {
-        presets: ['es2015', 'react']
+        plugins: []
     }
 });
+
+// Hot mode
+if (process.env.HOT) {
+    // Note: enabling React Transform and React Transform HMR:
+    config.module.loaders[0].query.plugins.push('react-transform');
+    config.module.loaders[0].query.extra = {
+        'react-transform': [{
+            target: 'react-transform-hmr',
+            imports: ['react-native'],
+            locals: ['module']
+        }]
+    };
+}
 
 module.exports = config;

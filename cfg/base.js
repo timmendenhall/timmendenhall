@@ -1,6 +1,5 @@
 'use strict';
 let path = require('path');
-let port = 8000;
 let srcPath = path.join(__dirname, '/../src');
 let publicPath = '/assets/';
 let additionalPaths = [];
@@ -19,10 +18,7 @@ module.exports = {
             '.jsx'
         ],
         alias: {
-            actions: srcPath + '/actions/',
             components: srcPath + '/components/',
-            sources: srcPath + '/sources/',
-            stores: srcPath + '/stores/',
             styles: srcPath + '/styles/',
             config: srcPath + '/config/' + process.env.REACT_WEBPACK_ENV
         }

@@ -42,6 +42,7 @@ function getValidEnv(env) {
  */
 function buildConfig(env) {
     var usedEnv = getValidEnv(env);
+    console.log(usedEnv + ' webpack config loaded');
     return configs[usedEnv];
 }
 
