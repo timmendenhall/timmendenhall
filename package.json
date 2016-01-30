@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
-    "build": "NODE_ENV=production npm run clean && npm run copy && webpack --env=dist",
+    "build": "npm run clean && npm run copy && NODE_ENV=production webpack --env=dist",
     "dev": "node server.js --env=dev",
     "prod-start": "sudo PORT=80 NODE_ENV=production forever start server.js",
     "prod-stop": "sudo forever stop 0",
