@@ -6,20 +6,11 @@ let publicPath = '/assets/';
 let additionalPaths = [];
 module.exports = {
     additionalPaths: additionalPaths,
-    port: port,
     debug: true,
     output: {
         path: path.join(__dirname, '/../dist/assets'),
         filename: 'app.js',
         publicPath: publicPath
-    },
-    devServer: {
-        contentBase: './src/',
-        historyApiFallback: true,
-        hot: true,
-        port: port,
-        publicPath: publicPath,
-        noInfo: false
     },
     resolve: {
         extensions: [
