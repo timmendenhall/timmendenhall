@@ -15,35 +15,21 @@ let config = _.merge({
     devtool: 'eval',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
-        new webpack.optimize.OccurenceOrderPlugin()
+        new webpack.NoErrorsPlugin()
     ]
 }, baseConfig);
 
 // Add needed loaders
 config.module.loaders.push({
+    loader: 'babel',
     test: /\.(js|jsx)$/,
-    loader: 'babel-loader',
     include: [].concat(
         config.additionalPaths,
         [path.join(__dirname, '/../src')]
     ),
     query: {
-        plugins: []
+        presets: ['react', 'es2015', 'react-hmre']
     }
 });
-
-// Hot mode
-if (process.env.HOT) {
-    // Note: enabling React Transform and React Transform HMR:
-    config.module.loaders[0].query.plugins.push('react-transform');
-    config.module.loaders[0].query.extra = {
-        'react-transform': [{
-            target: 'react-transform-hmr',
-            imports: ['react-native'],
-            locals: ['module']
-        }]
-    };
-}
 
 module.exports = config;

@@ -11,7 +11,7 @@ class AppComponent extends React.Component {
             <div className="index">
                 <img src={yeomanImage} />
                 <div className="notice">Tim Mendenhall Portfolio</div>
-                <strong>Coming Son</strong>
+                <strong>Coming soooon</strong>
             </div>
         );
     }

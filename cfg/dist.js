@@ -23,12 +23,15 @@ let config = _.merge({
 }, baseConfig);
 
 config.module.loaders.push({
-    test: /\.(js|jsx)$/,
     loader: 'babel',
+    test: /\.(js|jsx)$/,
     include: [].concat(
         config.additionalPaths,
         [path.join(__dirname, '/../src')]
-    )
+    ),
+    query: {
+        presets: ['react', 'es2015']
+    }
 });
 
 module.exports = config;
