@@ -8,7 +8,7 @@ class AppComponent extends React.Component {
         return (
             <div className="index">
                 <div className="notice">Tim Mendenhall Portfolio</div>
-                <strong>Coming soon!</strong>
+                <strong>Coming sometime!</strong>
             </div>
         );
     }
