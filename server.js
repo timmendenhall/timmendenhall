@@ -38,7 +38,7 @@ if (!isProduction) {
 
 // -- Set our static files to serve from to our /dist/ directory
 var rootDir = isProduction ? '/dist' : '/src';
-var indexFile = isProduction ? '/index.prod.html' : '/index.html';
+var indexFile = isProduction ? '/index.prod.html' : '/index.dev.html';
 
 app.use(express.static(path.join(__dirname, rootDir)));
 
