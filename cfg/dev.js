@@ -9,6 +9,7 @@ let baseConfig = require('./base');
 let config = _.merge({
     entry: [
         'webpack-hot-middleware/client',
+        'bootstrap-loader',
         './src/index'
     ],
     cache: true,

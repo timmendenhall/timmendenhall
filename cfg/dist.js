@@ -1,5 +1,6 @@
 'use strict';
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 let path = require('path');
 let webpack = require('webpack');
 let _ = require('lodash');
@@ -7,7 +8,10 @@ let _ = require('lodash');
 let baseConfig = require('./base');
 
 let config = _.merge({
-    entry: path.join(__dirname, '../src/index'),
+    entry: [
+        'bootstrap-loader/extractStyles',
+        path.join(__dirname, '../src/index')
+    ],
     cache: false,
     plugins: [
         new webpack.optimize.DedupePlugin(),
@@ -17,7 +21,8 @@ let config = _.merge({
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new ExtractTextPlugin('app.css', { allChunks: true })
     ]
 }, baseConfig);
 

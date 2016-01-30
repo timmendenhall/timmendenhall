@@ -38,10 +38,12 @@ if (!isProduction) {
 
 // -- Set our static files to serve from to our /dist/ directory
 var rootDir = isProduction ? '/dist' : '/src';
+var indexFile = isProduction ? '/index.prod.html' : '/index.html';
+
 app.use(express.static(path.join(__dirname, rootDir)));
 
 app.get('*', function (req, res) {
-    res.sendFile(__dirname + rootDir + '/index.html');
+    res.sendFile(__dirname + rootDir + indexFile);
 });
 
 app.listen(port, function () {

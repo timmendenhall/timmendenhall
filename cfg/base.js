@@ -1,4 +1,5 @@
 'use strict';
+const autoprefixer = require('autoprefixer');
 let path = require('path');
 let srcPath = path.join(__dirname, '/../src');
 let publicPath = '/assets/';
@@ -32,31 +33,22 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader!postcss-loader'
+                loaders: ['style', 'css', 'postcss']
             },
             {
-                test: /\.sass/,
-                loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+                test: /\.(scss)/,
+                loaders: ['style', 'css', 'postcss', 'sass']
             },
             {
-                test: /\.scss/,
-                loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
+                test: /\.(png|jpg|gif|woff|woff2|ttf|eot|svg)$/,
+                loader: 'url?limit=8000'
             },
+            // Bootstrap 3
             {
-                test: /\.less/,
-                loader: 'style-loader!css-loader!postcss-loader!less-loader'
-            },
-            {
-                test: /\.styl/,
-                loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
-            },
-            {
-                test: /\.(png|jpg|gif|woff|woff2)$/,
-                loader: 'url-loader?limit=8192'
+                test: /bootstrap-sass\/assets\/javascripts\//,
+                loader: 'imports?jQuery=jquery'
             }
         ]
     },
-    postcss: function () {
-        return [];
-    }
+    postcss: [autoprefixer]
 };
