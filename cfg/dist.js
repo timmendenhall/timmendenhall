@@ -9,7 +9,6 @@ let baseConfig = require('./base');
 let config = _.merge({
     entry: path.join(__dirname, '../src/index'),
     cache: false,
-    devtool: 'source-map',
     plugins: [
         new webpack.optimize.DedupePlugin(),
         new webpack.DefinePlugin({

@@ -12,7 +12,7 @@ let config = _.merge({
         './src/index'
     ],
     cache: true,
-    devtool: 'eval',
+    devtool: 'source-maps',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
