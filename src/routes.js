@@ -13,10 +13,10 @@ export default (
     <Route path="/" component={App}>
         <IndexRoute component={Index} />
 
-        <Route path="about" component={About}/>
-        <Route path="blog" component={Blog}/>
-        <Route path="work" component={Work}/>
-        <Route path="contact" component={Contact}/>
+        <Route path="/about" component={About}/>
+        <Route path="/blog" component={Blog}/>
+        <Route path="/work" component={Work}/>
+        <Route path="/contact" component={Contact}/>
 
         <Route path="*" component={NotFound}/>
     </Route>

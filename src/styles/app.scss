@@ -7,3 +7,11 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+.navbar-nav > li > a.active,
+.navbar-nav > li > a:hover.active,
+.navbar-nav > li > a:focus.active {
+  color: #fff;
+  cursor: default;
+  background-color: #555;
+}
