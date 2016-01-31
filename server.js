@@ -3,7 +3,7 @@ require('core-js/fn/object/assign');
 var open = require('open');
 var express = require('express');
 var path = require('path');
-
+var mongoose = require('mongoose');
 var app = express();
 
 // CONFIG
