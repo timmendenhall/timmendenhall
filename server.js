@@ -40,6 +40,8 @@ if (!isProduction) {
     }));
 }
 
+app.use(routes);
+
 // -- Set our static files to serve from
 app.use(express.static(path.join(__dirname, rootDir)));
 
@@ -52,3 +54,11 @@ app.listen(port, function () {
     console.log('timmendenhall.com [ ' + env  + ' ] Server listening on port: ', port);
     //open('http://localhost:' + port);
 });
+
+/**
+ * Mongoose!
+ */
+mongoose.connect('mongodb://localhost/timmendenhall');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'mongoDB connection error!'));
+db.once('open', () => console.log('connected to MongoDB!'));

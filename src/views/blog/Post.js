@@ -1,9 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router';
+import Glyph from '../../components/Glyph';
 
 class BlogComponent extends React.Component {
     render() {
         return (
             <div>
+                <div>
+                    <Link to="/blog" className="btn btn-primary"><Glyph type="menu-left"/> Back</Link>
+                </div>
                 <h1>Some sort of title</h1>
                 <strong><span>January 31st, 2016</span></strong>
                 <p></p>
