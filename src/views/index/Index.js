@@ -4,8 +4,14 @@ class HomeComponent extends React.Component {
     render() {
         return (
             <div className="home">
-                <h1>Web Developer</h1>
-                <p className="lead"></p>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8">
+
+                        </div>
+                        <div className="col-md-4"></div>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router'
+import { IndexLink, Link } from 'react-router'
 
 class HeaderComponent extends React.Component {
     render() {
@@ -7,13 +7,7 @@ class HeaderComponent extends React.Component {
             <nav className="navbar navbar-inverse navbar-fixed-top">
                 <div className="container">
                     <div className="navbar-header">
-                        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span className="sr-only">Toggle navigation</span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                        </button>
-                        <Link to="/" className="navbar-brand">Tim Mendenhall</Link>
+                        <IndexLink to="/" className="navbar-brand"><span className="glyphicon glyphicon-cloud" aria-hidden="true"></span> Tim Mendenhall</IndexLink>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">

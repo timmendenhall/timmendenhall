@@ -11,6 +11,9 @@ var port = process.env.PORT || 8080;
 app.set('port', port);
 var isProduction = process.env.NODE_ENV === 'production';
 
+var rootDir = isProduction ? '/dist' : '/src';
+var indexFile = isProduction ? '/index.prod.html' : '/index.dev.html';
+
 // -- Add the Dev / Hot middleware if we're not in production mode
 if (!isProduction) {
     var webpack = require('webpack');
@@ -36,10 +39,7 @@ if (!isProduction) {
     }));
 }
 
-// -- Set our static files to serve from to our /dist/ directory
-var rootDir = isProduction ? '/dist' : '/src';
-var indexFile = isProduction ? '/index.prod.html' : '/index.dev.html';
-
+// -- Set our static files to serve from
 app.use(express.static(path.join(__dirname, rootDir)));
 
 app.get('*', function (req, res) {
