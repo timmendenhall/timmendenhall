@@ -1,13 +1,14 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router'
+import Glyph from './Glyph';
 
 class HeaderComponent extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-inverse navbar-fixed-top">
+            <nav className="navbar navbar-inverse">
                 <div className="container">
                     <div className="navbar-header">
-                        <IndexLink to="/" className="navbar-brand"><span className="glyphicon glyphicon-cloud" aria-hidden="true"></span> Tim Mendenhall</IndexLink>
+                        <IndexLink to="/" className="navbar-brand"><Glyph type="cloud"/> Tim Mendenhall</IndexLink>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">
