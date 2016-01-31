@@ -1,7 +1,15 @@
 import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import { Router} from 'react-router'
+import { createHistory } from 'history';
+import routes from './routes';
+
+var history = createHistory();
 
 // Render the main component into the dom
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render((
+    <Router history={history}>
+        {routes}
+    </Router>
+), document.getElementById('app'));
