@@ -14,7 +14,7 @@ class BlogLayout extends React.Component {
                     <div className="well">
                         <h3>About</h3>
                         <p>Keeping up with technology comes with it's own quirks.</p>
-                        <p>Read about how I've conquered various technologies and learn a thing or two about all things development along the way.</p>
+                        <p>Read about how I've conquered various technologies and let us learn a thing or two about all things development along the way.</p>
                     </div>
                 </Column>
             </Row>

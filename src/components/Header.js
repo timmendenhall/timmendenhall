@@ -13,10 +13,10 @@ class HeaderComponent extends React.Component {
                     </div>
                     <div id="navbar" className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">
-                            <li><Link to="/blog" activeClassName="active">Blog</Link></li>
-                            <li><Link to="/work" activeClassName="active">Work</Link></li>
-                            <li><Link to="/about" activeClassName="active">About</Link></li>
-                            <li><Link to="/contact" activeClassName="active">Contact</Link></li>
+                            <li><Link to="/blog" activeClassName="active"><Glyph type="list-alt"/> Blog</Link></li>
+                            <li><Link to="/work" activeClassName="active"><Glyph type="briefcase"/> Work</Link></li>
+                            <li><Link to="/about" activeClassName="active"><Glyph type="user"/> About</Link></li>
+                            <li><Link to="/contact" activeClassName="active"><Glyph type="phone-alt"/> Contact</Link></li>
                         </ul>
                     </div>
                 </Container>
