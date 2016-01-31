@@ -1,12 +1,13 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router'
 import Glyph from './Glyph';
+import Container from './grid/Container';
 
 class HeaderComponent extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-inverse">
-                <div className="container">
+                <Container>
                     <div className="navbar-header">
                         <IndexLink to="/" className="navbar-brand"><Glyph type="cloud"/> Tim Mendenhall</IndexLink>
                     </div>
@@ -18,7 +19,7 @@ class HeaderComponent extends React.Component {
                             <li><Link to="/contact" activeClassName="active">Contact</Link></li>
                         </ul>
                     </div>
-                </div>
+                </Container>
             </nav>
         );
     }
