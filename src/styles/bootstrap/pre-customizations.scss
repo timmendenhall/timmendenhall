@@ -11,6 +11,10 @@
 //  src: url('#{$fonts-url-path}/OpenSans-Light.ttf') format('truetype');
 //}
 
+// Turn off nav collapse
+$grid-float-breakpoint: 0;
+$screen-xs-max: 0;
+
 // Other font size variables are based on this on, so this absolutely should go into the
 // pre-customizations.scss file.
 // $font-size-base: 16px;
