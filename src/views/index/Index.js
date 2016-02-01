@@ -10,10 +10,8 @@ class HomeComponent extends React.Component {
                 <Container>
                     <Row>
                         <Column span="8">
-                            Span 8
                         </Column>
                         <Column span="4">
-                            Span 4
                         </Column>
                     </Row>
                 </Container>
