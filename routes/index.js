@@ -12,7 +12,9 @@ router.use('/secret/s3cr371ns7411', function(req, res) {
 
     // wipe out existing blog entries
     BlogPost.remove({}, function(err) {
-
+        if (err) {
+            res.json({error: 'Could not remove Blog Post.'});
+        }
     });
 
     // 1/31/16
@@ -32,6 +34,9 @@ router.use('/secret/s3cr371ns7411', function(req, res) {
         }
         res.json({status: 'success', post: data});
     });
+
+
+    // Add some more of those bloggy things
 });
 
 module.exports = router;
