@@ -18,7 +18,7 @@ class BlogComponent extends React.Component {
         let posts = [];
 
         blog.items.forEach( (post) => {
-            posts.push(<PostPreview post={post} />);
+            posts.push(<PostPreview post={post} key={post.id}/>);
         });
 
         return posts;

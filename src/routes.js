@@ -6,8 +6,8 @@ import WorkLayout from './layout/Work';
 import BlogLayout from './layout/Blog';
 
 import About from './views/about/About';
-import Blog from './views/blog/BlogContainer';
-import BlogPost from './views/blog/Post';
+import BlogContainer from './views/blog/BlogContainer';
+import BlogPostContainer from './views/blog/PostContainer';
 import Work from './views/work/Work';
 import Skirmish from './views/work/skirmish/Skirmish';
 import Contact from './views/contact/Contact';
@@ -22,8 +22,8 @@ export default (
         <Route path="contact" component={Contact}/>
 
         <Route path="blog" component={BlogLayout}>
-            <IndexRoute component={Blog}/>
-            <Route path=":id" component={BlogPost}/>
+            <IndexRoute component={BlogContainer}/>
+            <Route path=":id" component={BlogPostContainer}/>
         </Route>
 
         <Route path="work" component={WorkLayout}>
