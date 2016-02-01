@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-fetch';
+
 const initialState = {
     isFetching: false,
     selected: {},
