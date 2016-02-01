@@ -10,16 +10,16 @@ const GET_BLOG_POSTS_FAIL = 'GET_BLOG_POSTS_FAIL';
 export default function reducer(state = initialState, action = {}) {
     switch (action.type) {
         case GET_BLOG_POSTS_REQUEST:
-            return Object.assign(state, {
+            return Object.assign({}, state, {
                 isFetching: true
             });
         case GET_BLOG_POSTS_SUCCESS:
-            return Object.assign(state, {
+            return Object.assign({}, state, {
                 isFetching: false,
                 items: action.response.items
             });
         case GET_BLOG_POSTS_FAIL:
-            return Object.assign(state, {
+            return Object.assign({}, state, {
                 isFetching: false,
                 items: initialState.items
             });
@@ -52,14 +52,8 @@ function fetchPosts() {
 }
 
 function shouldFetchPosts(state) {
-    const posts = state;
-    if (!posts.items) {
-        return true;
-    } else if (posts.isFetching) {
-        return false;
-    } else {
-        return true;
-    }
+    const posts = state.blog;
+    return !posts.items.length && !posts.isFetching;
 }
 
 export function fetchPostsIfNeeded() {
