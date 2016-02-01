@@ -6,7 +6,7 @@ import WorkLayout from './layout/Work';
 import BlogLayout from './layout/Blog';
 
 import About from './views/about/About';
-import Blog from './views/blog/Blog';
+import Blog from './views/blog/BlogContainer';
 import BlogPost from './views/blog/Post';
 import Work from './views/work/Work';
 import Skirmish from './views/work/skirmish/Skirmish';

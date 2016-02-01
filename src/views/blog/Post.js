@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import Glyph from '../../components/Glyph';
 
-class BlogComponent extends React.Component {
+class PostComponent extends React.Component {
     render() {
         return (
             <div>
@@ -20,6 +20,6 @@ class BlogComponent extends React.Component {
     }
 }
 
-BlogComponent.defaultProps = {};
+PostComponent.defaultProps = {};
 
-export default BlogComponent;
+export default PostComponent;

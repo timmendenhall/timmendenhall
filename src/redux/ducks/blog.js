@@ -28,9 +28,44 @@ export default function reducer(state = initialState, action = {}) {
     }
 }
 
-
-export function getBlogPosts() {
+function requestPosts() {
     return {
         type: GET_BLOG_POSTS_REQUEST
-    };
+    }
+}
+
+function receivePosts(json) {
+    return {
+        type: GET_BLOG_POSTS_SUCCESS,
+        response: json,
+        receivedAt: Date.now()
+    }
+}
+
+function fetchPosts() {
+    return (dispatch) => {
+        dispatch(requestPosts());
+        return fetch(`/api/blog`)
+            .then((req) => req.json())
+            .then((json) => dispatch(receivePosts(json)));
+    }
+}
+
+function shouldFetchPosts(state) {
+    const posts = state;
+    if (!posts.items) {
+        return true;
+    } else if (posts.isFetching) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+export function fetchPostsIfNeeded() {
+    return (dispatch, getState) => {
+        if (shouldFetchPosts(getState())) {
+            return dispatch(fetchPosts())
+        }
+    }
 }

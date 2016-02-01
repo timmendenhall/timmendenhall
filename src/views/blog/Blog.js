@@ -1,24 +1,47 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import Row from '../../components/grid/Row';
 import Column from '../../components/grid/Column';
+import PostPreview from './PostPreview';
+import Loading from'../../components/Loading';
 
 class BlogComponent extends React.Component {
+
+    componentDidMount() {
+        const { fetchPostsIfNeeded } = this.props;
+        fetchPostsIfNeeded();
+    }
+
+    renderPosts() {
+        const { blog } = this.props;
+
+        let posts = [];
+
+        blog.items.forEach( (post) => {
+            posts.push(<PostPreview post={post} />);
+        });
+
+        return posts;
+    }
+
     render() {
+        const { blog } = this.props;
+
         return (
             <div>
-                <div className="well-lg">
-                    <h2><Link to="/blog/test">Example Post</Link></h2>
-                    <strong><span>January 31st, 2016</span></strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a efficitur velit, sed rhoncus orci. Aliquam vitae iaculis orci. Morbi sed neque quis quam porttitor pellentesque. Aliquam aliquet tristique lorem, quis euismod dui porttitor vitae. Duis gravida ipsum ut augue tempus elementum. Maecenas sit amet sagittis odio. Nam laoreet in dui quis congue. Vivamus feugiat bibendum faucibus. Duis volutpat ris ...</p>
-                </div>
-
-
+                { blog.isFetching &&
+                    <Loading/>
+                }
+                { !blog.isFetching &&
+                    this.renderPosts()
+                }
             </div>
         );
     }
 }
 
-BlogComponent.defaultProps = {};
+BlogComponent.propTypes = {
+    fetchPostsIfNeeded: PropTypes.func.isRequired
+};
 
 export default BlogComponent;
