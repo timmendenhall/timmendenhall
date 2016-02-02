@@ -40,7 +40,7 @@ module.exports = {
                 loaders: ['style', 'css', 'postcss', 'sass']
             },
             {
-                test: /\.(png|jpg|gif|woff|woff2|ttf|eot|svg)$/,
+                test: /\.(pdf|docx|doc|png|jpg|gif|woff|woff2|ttf|eot|svg)$/,
                 loader: 'url?limit=8000'
             },
             // Bootstrap 3

@@ -2,6 +2,8 @@ import React from 'react';
 import Row from '../../components/grid/Row';
 import Column from '../../components/grid/Column';
 import Container from '../../components/grid/Container';
+import ResumeDoc from '../../documents/Resume_Tim_Mendenhall.docx';
+import ResumePdf from '../../documents/Resume_Tim_Mendenhall.pdf';
 
 class ContactComponent extends React.Component {
     render() {
@@ -14,10 +16,10 @@ class ContactComponent extends React.Component {
                 <Container>
                     <Row>
                         <Column span="6">
-                            <button className="btn-lg btn-success">PDF</button>
+                            <a href={ResumePdf} className="btn-lg btn-success">PDF</a>
                         </Column>
                         <Column span="6">
-                            <button className="btn-lg btn-primary">Word</button>
+                            <a href={ResumeDoc} className="btn-lg btn-primary">Word</a>
                         </Column>
                     </Row>
                 </Container>
