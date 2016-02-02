@@ -9,7 +9,7 @@ class HeaderComponent extends React.Component {
             <nav className="navbar navbar-inverse">
                 <Container>
                     <div className="navbar-header">
-                        <IndexLink to="/" className="navbar-brand"><Glyph type="cloud"/> Tim Mendenhall</IndexLink>
+                        <IndexLink to="/" className="navbar-brand">Tim Mendenhall</IndexLink>
                     </div>
                     <div id="navbar" className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">

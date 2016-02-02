@@ -4,8 +4,7 @@ import { logger } from './middleware/logger.js';
 import reducers from './rootReducer.js';
 
 const createStoreWithMiddleware = applyMiddleware(
-    thunk,
-    logger
+    thunk
 )(createStore);
 
 export default function configureStore(initialState) {
