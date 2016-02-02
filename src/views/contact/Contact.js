@@ -12,7 +12,7 @@ class ContactComponent extends React.Component {
                 <p className="lead">If you're a human, send me an email.</p>
                 <h2>timmendenhall [at] gmail [dot] com</h2>
                 <br/>
-                <p className="lead">If you're hiring, download my résumé.</p>
+                <p className="lead">Download my résumé.</p>
                 <Container>
                     <Row>
                         <Column span="6">
