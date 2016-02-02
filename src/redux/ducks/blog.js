@@ -110,28 +110,26 @@ function fetchPost(id) {
     };
 }
 
-function shouldFetchPost(id, state) {
-    return (dispatch) => {
-        const posts = state.blog;
+function shouldFetchPost(id, state, dispatch) {
+    const posts = state.blog;
 
-        let index = posts.items.findIndex( (post) => {
-            return post.id === id
-        });
+    let index = posts.items.findIndex( (post) => {
+        return post.id == id
+    });
 
-        let postFound = index > -1;
+    let postFound = index > -1;
 
-        // post found
-        if (postFound) {
-            dispatch(receivePost(posts.items[index]));
-        }
+    // post found
+    if (postFound) {
+        dispatch(receivePost(posts.items[index]));
+    }
 
-        return !postFound;
-    };
+    return !postFound;
 }
 
 export function fetchPostIfNeeded(id) {
     return (dispatch, getState) => {
-        if (shouldFetchPost(id, getState())) {
+        if (shouldFetchPost(id, getState(), dispatch)) {
             return dispatch(fetchPost(id))
         }
     };
