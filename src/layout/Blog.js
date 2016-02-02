@@ -7,10 +7,10 @@ class BlogLayout extends React.Component {
     render() {
         return (
             <Row>
-                <Column span="8">
+                <Column medium="8" extrasmall="12">
                     {this.props.children}
                 </Column>
-                <Column span="4">
+                <Column medium="4" extrasmall="12">
                     <div className="well">
                         <h3>About</h3>
                         <p>Keeping up with technology comes with it's own quirks.</p>
