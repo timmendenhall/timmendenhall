@@ -1,5 +1,5 @@
-var BlogPost = require('./BlogPost');
+import BlogPost from './BlogPost';
 
-module.exports = {
+export default {
     blog: BlogPost
-};
+}

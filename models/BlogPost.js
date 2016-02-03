@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-var blogPostSchema = mongoose.Schema({
+let blogPostSchema = mongoose.Schema({
     title: String,
     body: String,
     id: String,
@@ -8,6 +8,6 @@ var blogPostSchema = mongoose.Schema({
     lastModified: Date
 });
 
-var model = mongoose.model('BlogPost', blogPostSchema);
+let model = mongoose.model('BlogPost', blogPostSchema);
 
-module.exports = model;
+export default model;

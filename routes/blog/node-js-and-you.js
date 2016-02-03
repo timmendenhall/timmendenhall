@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     title: 'Node JS And You',
     id: 'node-js-and-you',
     created: new Date('2016-02-03T00:57:19.489Z'),

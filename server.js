@@ -1,11 +1,12 @@
 /*eslint no-console:0 */
-require('core-js/fn/object/assign');
-var open = require('open');
-var express = require('express');
-var path = require('path');
-var mongoose = require('mongoose');
-var app = express();
-var routes = require('./routes/index');
+import 'core-js/fn/object/assign';
+import open from 'open';
+import express from 'express';
+import path from 'path';
+import mongoose from 'mongoose';
+import routes from './routes/index';
+
+let app = express();
 
 // CONFIG
 var port = process.env.PORT || 8080;

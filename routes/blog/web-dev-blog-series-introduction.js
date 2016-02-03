@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     title: 'Web Dev Blog Series Introduction',
     id: 'web-dev-blog-series-introduction',
     created: new Date('2016-02-01T00:11:59.950Z'),

@@ -1,7 +1,7 @@
-var express = require('express');
+import express from 'express';
+import models from '../models/index';
 
-var router = express.Router();
-var models = require('../models/index');
+let router = express.Router();
 
 router.get('/:model', (req, res) => {
     var model = models[req.params.model];
@@ -39,4 +39,4 @@ router.get('/:model/:findByProp/:findByValue', (req, res) => {
     });
 });
 
-module.exports =  router;
+export default router;
