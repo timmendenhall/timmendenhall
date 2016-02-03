@@ -8,6 +8,7 @@ import BlogLayout from './layout/Blog';
 import About from './views/about/About';
 import BlogContainer from './views/blog/BlogContainer';
 import BlogPostContainer from './views/blog/PostContainer';
+import TestPost from './views/blog/TestPost';
 import Work from './views/work/Work';
 import Skirmish from './views/work/skirmish/Skirmish';
 import Contact from './views/contact/Contact';
@@ -24,6 +25,7 @@ export default (
         <Route path="blog" component={BlogLayout}>
             <IndexRoute component={BlogContainer}/>
             <Route path=":id" component={BlogPostContainer}/>
+            <Route path="test/test" component={TestPost}/>
         </Route>
 
         <Route path="work" component={WorkLayout}>

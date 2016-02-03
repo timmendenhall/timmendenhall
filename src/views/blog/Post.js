@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import {Link} from 'react-router';
 import Glyph from '../../components/Glyph';
+import moment from 'moment';
 
 class PostComponent extends React.Component {
     componentDidMount() {
@@ -12,7 +13,7 @@ class PostComponent extends React.Component {
 
     render() {
         const post = this.props.blog.selected;
-        const formattedCreated = new Date(post.created).toDateString();
+        const formattedCreated = moment(post.created).format('MMMM Do YYYY, h:mm:ss a');
 
         return (
             <div>
