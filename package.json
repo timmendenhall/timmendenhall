@@ -9,10 +9,10 @@
     "copy": "copyfiles -f ./src/index.prod.html ./src/favicon.ico ./dist",
     "build": "npm run clean && npm run copy && NODE_ENV=production webpack --env=dist",
     "dev": "node server.js --env=dev",
-    "prod-start": "sudo PORT=80 NODE_ENV=production forever start server.js",
+    "prod-start": "sudo PORT=80 NODE_ENV=production forever start bootstrap.js",
     "prod-stop": "sudo forever stop 0",
     "prod-restart": "sudo forever restart 0",
-    "prod-test": "NODE_ENV=production node server.js",
+    "prod-test": "NODE_ENV=production node bootstrap.js",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
     "release:major": "npm version major && npm publish && git push --follow-tags",
@@ -79,6 +79,7 @@
     "webpack-hot-middleware": "^2.6.4"
   },
   "dependencies": {
+    "babel-core": "^6.4.5",
     "core-js": "^2.0.0",
     "es6-promise": "^3.0.2",
     "express": "^4.13.4",
