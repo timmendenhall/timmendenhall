@@ -7,6 +7,11 @@ var router = express.Router();
 router.use('/api', api);
 
 router.use('/secret/s3cr371ns7411', function(req, res) {
+    var pass = req.query.pass;
+    if (pass !== 'pass') {
+        res.json({error: 'Could not read password.'});
+    }
+
     // install blogs
     var BlogPost = models['blog'];
 
