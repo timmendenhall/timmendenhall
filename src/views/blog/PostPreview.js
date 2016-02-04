@@ -9,9 +9,9 @@ class PostPreviewComponent extends React.Component {
         const formattedCreated = moment(post.created).format('MMMM Do YYYY, h:mm:ss a');
 
         return (
-            <div className="well-lg">
+            <div className="well">
                 <h2><Link to={`/blog/${post.id}`}>{post.title}</Link></h2>
-                <strong><span>{formattedCreated}</span></strong>
+                <div className="lead">{post.description}</div>
             </div>
         );
     }

@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 class WorkComponent extends React.Component {
     render() {
         return (
-            <div className="home">
+            <div className="text-center">
                 <p className="lead">
                     <Link to="/work/skirmish"><img src={skirmishScreenshot}/></Link>
                 </p>

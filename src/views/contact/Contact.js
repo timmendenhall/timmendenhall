@@ -8,7 +8,7 @@ import ResumePdf from '../../documents/Resume_Tim_Mendenhall.pdf';
 class ContactComponent extends React.Component {
     render() {
         return (
-            <div className="home">
+            <div className="text-center">
                 <p className="lead">If you're a human, send me an email.</p>
                 <h2>timmendenhall [at] gmail [dot] com</h2>
                 <br/>

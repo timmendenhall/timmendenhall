@@ -8,7 +8,7 @@ import Glyph from '../../components/Glyph';
 class HomeComponent extends React.Component {
     render() {
         return (
-            <div className="home">
+            <div className="text-center">
                 <Container>
                     <Row>
                         <Column span="12">

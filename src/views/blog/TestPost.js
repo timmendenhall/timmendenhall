@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import {Link} from 'react-router';
 import Glyph from '../../components/Glyph';
 import moment from 'moment';
+import post from './testPostData';
 
 class TestPostComponent extends React.Component {
     componentDidMount() {
@@ -9,7 +10,6 @@ class TestPostComponent extends React.Component {
 
     render() {
 
-        const post = require('../../../routes/blog/node-js-and-you');
         const formattedCreated = moment(post.created).format('MMMM Do YYYY, h:mm:ss a');
 
         return (

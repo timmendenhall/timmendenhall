@@ -3,7 +3,7 @@ import React from 'react';
 class NotFoundComponent extends React.Component {
     render() {
         return (
-            <div className="home">
+            <div className="text-center">
                 <h1>404</h1>
                 <p className="lead">Whoops.</p>
             </div>

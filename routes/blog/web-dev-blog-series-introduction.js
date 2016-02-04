@@ -1,7 +1,9 @@
 export default {
     title: 'Web Dev Blog Series Introduction',
     id: 'web-dev-blog-series-introduction',
+    description: 'A quick introduction to this blog series.',
     created: new Date('2016-02-01T00:11:59.950Z'),
+    lastModified: new Date(),
     body: `
             <h2>Baby Steps</h2>
             <p>Ever wanted to make your own web application?  Ever wonder which is better unidirectional or bidirectional data flow?  Don't even know what that means?  As long as you answered a resounding "Yes!" to the first question, then this series is for you.</p>

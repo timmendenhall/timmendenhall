@@ -15,13 +15,22 @@ class PostComponent extends React.Component {
         const post = this.props.blog.selected;
         const formattedCreated = moment(post.created).format('MMMM Do YYYY, h:mm:ss a');
 
+        let formattedModified;
+
+        if (post.lastModified) {
+            formattedModified = moment(post.lastModified).format('MMMM Do YYYY, h:mm:ss a');
+        }
+
         return (
             <div>
                 <div>
                     <Link to="/blog" className="btn btn-primary"><Glyph type="menu-left"/> Back</Link>
                 </div>
                 <h1>{post.title}</h1>
-                <strong><span>{formattedCreated}</span></strong>
+                <p><strong>Created {formattedCreated}</strong></p>
+                { formattedModified &&
+                    <p><em>Last modified on {formattedModified}</em></p>
+                }
                 <div dangerouslySetInnerHTML={{__html: post.body}}>
                 </div>
             </div>
