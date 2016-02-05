@@ -11,6 +11,8 @@ class PostPreviewComponent extends React.Component {
         return (
             <div className="well">
                 <h2><Link to={`/blog/${post.id}`}>{post.title}</Link></h2>
+                <div><Glyph type="time"></Glyph> Posted on {formattedCreated}</div>
+                <hr/>
                 <div className="lead">{post.description}</div>
             </div>
         );

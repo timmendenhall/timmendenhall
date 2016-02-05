@@ -2,8 +2,14 @@ import React from 'react';
 import Container from '../components/grid/Container';
 import Row from '../components/grid/Row';
 import Column from '../components/grid/Column';
+import Search from '../components/Search';
 
 class BlogLayout extends React.Component {
+
+    onClickSearch(e) {
+
+    }
+
     render() {
         return (
             <Row>
@@ -11,6 +17,10 @@ class BlogLayout extends React.Component {
                     {this.props.children}
                 </Column>
                 <Column medium="4" extrasmall="12">
+                    <div className="well">
+                        <h3>Search Blog</h3>
+                        <Search onClick={this.onClickSearch.bind(this)}/>
+                    </div>
                     <div className="well">
                         <h3>About</h3>
                         <p>Keeping up with technology comes with it's own quirks.</p>

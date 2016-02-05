@@ -18,7 +18,8 @@ class TestPostComponent extends React.Component {
                     <Link to="/blog" className="btn btn-primary"><Glyph type="menu-left"/> Back</Link>
                 </div>
                 <h1>{post.title}</h1>
-                <strong><span>{formattedCreated}</span></strong>
+                <div><Glyph type="time"></Glyph> Posted on {formattedCreated}</div>
+                <hr/>
                 <div dangerouslySetInnerHTML={{__html: post.body}}>
                 </div>
             </div>

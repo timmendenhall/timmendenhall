@@ -27,10 +27,11 @@ class PostComponent extends React.Component {
                     <Link to="/blog" className="btn btn-primary"><Glyph type="menu-left"/> Back</Link>
                 </div>
                 <h1>{post.title}</h1>
-                <p><strong>Created {formattedCreated}</strong></p>
+                <div><Glyph type="time"></Glyph> Posted on {formattedCreated}</div>
                 { formattedModified &&
                     <p><em>Last modified on {formattedModified}</em></p>
                 }
+                <hr/>
                 <div dangerouslySetInnerHTML={{__html: post.body}}>
                 </div>
             </div>
