@@ -13,10 +13,10 @@ class BlogLayout extends React.Component {
     render() {
         return (
             <Row>
-                <Column medium="8" extrasmall="12">
+                <Column medium="8">
                     {this.props.children}
                 </Column>
-                <Column medium="4" extrasmall="12">
+                <Column medium="4">
                     <div className="well">
                         <h3>Search Blog</h3>
                         <Search onClick={this.onClickSearch.bind(this)}/>

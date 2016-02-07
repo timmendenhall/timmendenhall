@@ -6,7 +6,8 @@ let blogPostSchema = mongoose.Schema({
     body: String,
     id: String,
     created: {type: Date, default: Date.now},
-    lastModified: Date
+    lastModified: Date,
+    tags: { type: [String], index: true } // field level
 });
 
 let model = mongoose.model('BlogPost', blogPostSchema);

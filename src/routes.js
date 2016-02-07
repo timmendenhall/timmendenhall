@@ -8,12 +8,17 @@ import BlogLayout from './layout/Blog';
 import About from './views/about/About';
 import BlogContainer from './views/blog/BlogContainer';
 import BlogPostContainer from './views/blog/PostContainer';
-import TestPost from './views/blog/TestPost';
 import Work from './views/work/Work';
 import Skirmish from './views/work/skirmish/Skirmish';
 import Contact from './views/contact/Contact';
 import Index from './views/index/Index';
 import NotFound from './views/not-found/NotFound';
+
+const isProduction = 'production' === process.env.NODE_ENV;
+
+if (!isProduction) {
+    let TestPost = require('./views/blog/TestPost');
+}
 
 export default (
     <Route path="/" component={AppLayout}>
@@ -25,7 +30,11 @@ export default (
         <Route path="blog" component={BlogLayout}>
             <IndexRoute component={BlogContainer}/>
             <Route path=":id" component={BlogPostContainer}/>
-            <Route path="test/test" component={TestPost}/>
+
+            { !isProduction &&
+                <Route path="test/test" component={TestPost}/>
+            }
+
         </Route>
 
         <Route path="work" component={WorkLayout}>
