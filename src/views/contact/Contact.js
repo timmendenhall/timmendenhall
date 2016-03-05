@@ -22,6 +22,11 @@ class ContactComponent extends React.Component {
                             <a href={ResumeDoc} className="btn-lg btn-primary">Word</a>
                         </Column>
                     </Row>
+                    <Row>
+                        <Column span="12">
+                          <a href="https://github.com/ultimatetimmah" className="btn-lg btn-primary">Github</a>
+                        </Column>
+                    </Row>
                 </Container>
             </div>
         );

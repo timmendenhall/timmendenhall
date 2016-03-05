@@ -16,10 +16,6 @@ import NotFound from './views/not-found/NotFound';
 
 const isProduction = 'production' === process.env.NODE_ENV;
 
-if (!isProduction) {
-    let TestPost = require('./views/blog/TestPost');
-}
-
 export default (
     <Route path="/" component={AppLayout}>
         <IndexRoute component={Index} />
@@ -30,11 +26,6 @@ export default (
         <Route path="blog" component={BlogLayout}>
             <IndexRoute component={BlogContainer}/>
             <Route path=":id" component={BlogPostContainer}/>
-
-            { !isProduction &&
-                <Route path="test/test" component={TestPost}/>
-            }
-
         </Route>
 
         <Route path="work" component={WorkLayout}>
