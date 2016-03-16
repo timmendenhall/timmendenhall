@@ -6,7 +6,7 @@ import Container from './grid/Container';
 class HeaderComponent extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-inverse">
+            <nav className="navbar navbar-default">
                 <Container>
                     <div className="navbar-header">
                         <IndexLink to="/" className="navbar-brand">Tim Mendenhall</IndexLink>

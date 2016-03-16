@@ -7,16 +7,23 @@
 // Here we're adjusting the hue of that default:
 //$btn-primary-bg: adjust-hue($btn-primary-bg, +20deg);
 
-// NOTE: $gray-dark is defined in _variables.scss
-//$body-bg: $gray-dark;
+$body-bg: #ECEFF1;
 //$text-color: #FFF;
 
+// Nav bar
+$navbar-default-bg: #37474F;
+$navbar-default-link-color: #DDD;
+$navbar-default-link-hover-color: #FFF;
+//$navbar-default-link-hover-bg: #40C4FF;
+$navbar-default-link-active-bg: #40C4FF;
+$navbar-default-link-active-color: #FFF;
+
 // Header Brand
-$navbar-inverse-brand-color: #EEE;
+$navbar-default-brand-color: #FFF;
+$navbar-default-brand-hover-color: #EEE;
 
-// Header buttons
-//$navbar-inverse-link-color: #000;
+// Jumbotron
+$jumbotron-bg: #f5f5f5;
 
+// Well
 
-
-//$line-height-computed: 0;
