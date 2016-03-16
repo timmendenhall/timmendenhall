@@ -8,7 +8,15 @@
 //$btn-primary-bg: adjust-hue($btn-primary-bg, +20deg);
 
 $body-bg: #ECEFF1;
-//$text-color: #FFF;
+$text-color: #000;
+
+// Buttons
+$btn-default-bg: #607D8B;
+$btn-default-border: darken($btn-default-bg, 5%);
+$btn-default-color: #FFF;
+
+$btn-success-bg: #607D8B;
+$btn-success-border: darken($btn-success-bg, 5%);
 
 // Nav bar
 $navbar-default-bg: #37474F;
@@ -23,7 +31,7 @@ $navbar-default-brand-color: #FFF;
 $navbar-default-brand-hover-color: #EEE;
 
 // Jumbotron
-$jumbotron-bg: #f5f5f5;
+$jumbotron-bg: #CFD8DC;
 
 // Well
-
+$well-bg: #CFD8DC;

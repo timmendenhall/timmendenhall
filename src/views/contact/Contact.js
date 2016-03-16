@@ -9,8 +9,8 @@ import Glyph from '../../components/Glyph';
 class ContactComponent extends React.Component {
     render() {
         return (
-            <div className="text-center">
-                <h3>Whether you're a novice programmer, fellow technology enthusiast, or hiring manager, I'd love to hear from you!</h3>
+            <div className="jumbotron text-center">
+                <h2>Whether you're a novice programmer, fellow technology enthusiast, or hiring manager, I'd love to hear from you!</h2>
                 <br/>
                 <p className="lead">Send me an email.</p>
                 <Container>
