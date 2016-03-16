@@ -39,7 +39,7 @@ class ContactComponent extends React.Component {
                 <Container>
                   <Row>
                     <Column span="12">
-                      <a href="#" className="btn btn-lg btn-default"><Glyph type="globe"/> Github</a>
+                      <a href="https://github.com/ultimatetimmah" className="btn btn-lg btn-default"><Glyph type="globe"/> Github</a>
                     </Column>
                   </Row>
                 </Container>
