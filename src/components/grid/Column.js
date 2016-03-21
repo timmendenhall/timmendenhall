@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-class ColumnComponent extends React.Component {
+class Column extends React.Component {
     render() {
         const { span, extrasmall, small, medium, large, offset } = this.props;
 
@@ -37,7 +37,7 @@ class ColumnComponent extends React.Component {
     }
 }
 
-ColumnComponent.propTypes = {
+Column.propTypes = {
     span: PropTypes.string,
     extrasmall: PropTypes.string,
     small: PropTypes.string,
@@ -46,4 +46,4 @@ ColumnComponent.propTypes = {
     offset: PropTypes.string
 };
 
-export default ColumnComponent;
+export default Column;
