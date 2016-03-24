@@ -28,7 +28,7 @@ class BlogLayout extends React.Component {
                     </div>
                 </Column>
             </Row>
-        )
+        );
     }
 }
 
