@@ -78,7 +78,7 @@ function shouldFetchPosts(state) {
 export function fetchPostsIfNeeded() {
     return (dispatch, getState) => {
         if (shouldFetchPosts(getState())) {
-            return dispatch(fetchPosts())
+            return dispatch(fetchPosts());
         }
     };
 }
@@ -90,7 +90,7 @@ function requestPost(id) {
     return {
         type: GET_BLOG_POST_REQUEST,
         id
-    }
+    };
 }
 
 function receivePost(json) {
@@ -114,7 +114,7 @@ function shouldFetchPost(id, state, dispatch) {
     const posts = state.blog;
 
     let index = posts.items.findIndex( (post) => {
-        return post.id == id
+        return post.id == id;
     });
 
     let postFound = index > -1;
@@ -130,7 +130,7 @@ function shouldFetchPost(id, state, dispatch) {
 export function fetchPostIfNeeded(id) {
     return (dispatch, getState) => {
         if (shouldFetchPost(id, getState(), dispatch)) {
-            return dispatch(fetchPost(id))
+            return dispatch(fetchPost(id));
         }
     };
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndexLink, Link } from 'react-router'
+import { IndexLink, Link } from 'react-router';
 import Glyph from './Glyph';
 import Container from './grid/Container';
 
