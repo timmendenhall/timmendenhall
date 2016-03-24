@@ -2,7 +2,7 @@ import 'core-js/fn/object/assign';
 import es6Promise from 'es6-promise';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router} from 'react-router'
+import { Router} from 'react-router';
 import { createHistory } from 'history';
 import { Provider } from 'react-redux';
 
