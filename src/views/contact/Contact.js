@@ -10,7 +10,7 @@ class ContactComponent extends React.Component {
     render() {
         return (
             <div className="jumbotron text-center">
-                <h2>Whether you're a novice programmer, fellow technology enthusiast, or hiring manager, I'd love to hear from you!</h2>
+                <h2>I'd love to hear from you!</h2>
                 <br/>
                 <p className="lead">Send me an email.</p>
                 <Container>
@@ -39,7 +39,7 @@ class ContactComponent extends React.Component {
                 <Container>
                   <Row>
                     <Column span="12">
-                      <a href="https://github.com/ultimatetimmah" className="btn btn-lg btn-default"><Glyph type="globe"/> Github</a>
+                      <a href="https://github.com/timmendenhall" className="btn btn-lg btn-default"><Glyph type="globe"/> Github</a>
                     </Column>
                   </Row>
                 </Container>

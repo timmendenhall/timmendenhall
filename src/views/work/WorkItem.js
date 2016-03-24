@@ -11,7 +11,9 @@ class WorkItem extends React.Component {
             <div className="well well-lg">
                 <Row>
                     <Column span="4">
-                        <Link to={this.props.link}>{this.props.title}</Link>
+                        <h2>
+                            <Link to={this.props.link}>{this.props.title}</Link>
+                        </h2>
                     </Column>
                 </Row>
                 <Row>
