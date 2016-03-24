@@ -4,10 +4,10 @@ import Container from '../components/grid/Container';
 class WorkLayout extends React.Component {
     render() {
         return (
-            <Container>
+            <div>
                 {this.props.children}
-            </Container>
-        )
+            </div>
+        );
     }
 }
 

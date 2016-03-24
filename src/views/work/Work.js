@@ -1,7 +1,9 @@
 import React from 'react';
 import WorkItem from './WorkItem';
 import skirmishScreenshot from '../../images/skirmish-screen-shot.png';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
+import Row from '../../components/grid/Row';
+import Column from '../../components/grid/Column';
 
 class Work extends React.Component {
 
@@ -21,7 +23,11 @@ class Work extends React.Component {
     render() {
         return (
             <div>
-                {this.renderWorkItems()}
+                <Row>
+                    <Column span="12">
+                        {this.renderWorkItems()}
+                    </Column>
+                </Row>
             </div>
         );
     }

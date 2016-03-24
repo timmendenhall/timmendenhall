@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './../components/Header';
+import Container from './../components/grid/Container';
 
 class AppComponent extends React.Component {
     render() {
@@ -7,11 +8,11 @@ class AppComponent extends React.Component {
             <div>
                 <Header/>
 
-                <div className="container">
+                <Container>
 
                     {this.props.children}
 
-                </div>
+                </Container>
             </div>
         );
     }
