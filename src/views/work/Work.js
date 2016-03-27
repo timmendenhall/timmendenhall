@@ -14,7 +14,8 @@ class Work extends React.Component {
             <WorkItem
                 link="/work/skirmish"
                 title="Skirmish"
-                description="Bacon ipsum dolor amet pancetta biltong spare ribs, sausage meatloaf kevin turkey ribeye tongue. Beef porchetta chuck, filet mignon pork loin meatloaf brisket swine tri-tip chicken strip steak alcatra drumstick. Shoulder short loin ground round sausage ribeye. Cupim corned beef ribeye, pancetta cow ball tip strip steak kielbasa chicken fatback meatball. Kevin spare ribs capicola biltong doner meatball, sausage tri-tip meatloaf boudin flank sirloin landjaeger ham. Strip steak jowl ham hock ball tip. Shankle doner flank pork chop bresaola capicola pastrami."/>
+                stack={['three', 'node', 'socket', 'react', 'mongodb']}
+                description="A real time strategy game that runs in your browser!  The game was coded entirely with javascript and features 3D rendering with webGL, online multiplayer with socket.io and a backend in Mongo DB."/>
         );
 
         return workItems;
