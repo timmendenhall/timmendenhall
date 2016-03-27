@@ -1,5 +1,5 @@
 export default {
-    title: 'Node JS And You',
+    title: 'Node JS and You',
     id: 'node-js-and-you',
     description: 'Learn how to install and create a basic web server in Node.js.',
     created: new Date('2016-02-03T00:57:19.489Z'),
